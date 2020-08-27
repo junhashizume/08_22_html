@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+    <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id="battlebgm" autoplay controls src="battlebgm.mp3" style="display:none"></audio>
+
+    <audio src="attack.mp3" id="attack" style="display: none;"></audio>
+    <audio src="attackkaisin.mp3" id="attackkaisin" style="display: none;"></audio>
+    <audio src="attackmagic.mp3" id="attackmagic" style="display: none;"></audio>
+    <audio src="attackmiss.mp3" id="attackmiss" style="display: none;"></audio>
+    <audio src="battlewin.mp3" id="battlewin" style="display: none;"></audio>
+    <audio src="battlelose.mp3" id="battlelose" style="display: none;"></audio>
+
+
+<main>
+<div><p id=mimic_appear>ミミックがあらわれた！！</p></div>
+<div class="box">
+<img id="mimicimage" src="mimic.png" alt="">
+</div>
+
+<p id="echo"></p>
+<p id="echo2"></p>
+<div class="container2">
+    <p class="box2">
+<ul>
+    <li id="gu_btn">正拳突き</li>
+    <li id="cho_btn">ギガスラッシュ</li>
+    <li id="par_btn">メラミ</li>
+  </ul>
+</p>
+</div>
+
+  
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+  
+    
+$("#gu_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 10);
+
+    if(num<=2){
+        $("#echo").text('ミス！ミミックがザキを唱えた！');
+        $("#echo2").text('僕はしんでしまった');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#battlebgm").get(0).pause();
+        $("#attackmiss").get(0).play();
+        $("#battlelose").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl.html';
+        },5500);
+    }
+
+    if(num>=3 && num<=5){
+        $("#echo").text('ミス！ミミックが噛んできた！！');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmiss").get(0).play();
+    }
+
+    if(num>=6 && num<=9){
+        $("#echo").text('ミミックに3のダメージ！');
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attack").get(0).play();
+    }
+    if(num==10){
+        $("#echo").text('会心の一撃！ミミックに10のダメージ！！');
+        $("#echo2").text('ミミックを倒した！');
+        $("#mimic_appear").hide();
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100);
+        $("#attackkaisin").get(0).play();
+        $("#battlewin").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl4.html';
+        },2000);
+
+    }
+});  
+
+$("#cho_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 10);
+    if(num<=2){
+        $("#echo").text('ミス！ミミックがザキを唱えた！');
+        $("#echo2").text('僕はしんでしまった');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmiss").get(0).play();
+        $("#battlelose").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl.html';
+        },5500);
+        $("#battlebgm").get(0).pause();
+    }
+    if(num>=3 && num<=5){
+        $("#echo").text('ミス！ミミックが噛んできた！！');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmiss").get(0).play();
+    }
+    if(num>=6 && num<=9){
+        $("#echo").text('ギガスラッシュ！ミミックに3のダメージ！');
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attack").get(0).play();
+    }
+    if(num==10){
+        $("#echo").text('会心の一撃！ミミックに10のダメージ！！');
+        $("#echo2").text('ミミックを倒した！');
+        $("#mimic_appear").hide();
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100);
+        $("#attackkaisin").get(0).play();
+        $("#battlewin").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl4.html';
+        },2000);
+
+    }
+}); 
+    
+$("#par_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 10);
+    
+    if(num<=2){
+        $("#echo").text('ミス！ミミックがザキを唱えた！');
+        $("#echo2").text('僕はしんでしまった');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmiss").get(0).play();
+        $("#battlelose").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl.html';
+        },5500);
+        $("#battlebgm").get(0).pause();
+    }
+    if(num>=3 && num<=5){
+        $("#echo").text('ミス！ミミックが噛んできた！！');
+        $("main").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmiss").get(0).play().currentTime();
+    }
+    if(num>=6 && num<=9){
+        $("#echo").text('メラミを唱えた！ミミックに3のダメージ！');
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        $("#attackmagic").get(0).play();
+    }
+    if(num==10){
+        $("#echo").text('会心の一撃！ミミックに10のダメージ！！');
+        $("#echo2").text('ミミックを倒した！');
+        $("#mimic_appear").hide();
+        $("#mimicimage").fadeOut(100).fadeIn(100).fadeOut(100);
+        $("#attackkaisin").get(0).play();
+        $("#battlewin").get(0).play();
+            setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl4.html';
+        },2000);
+    }  
+}); 
+    
+</script>
+</body>
+</html>
+    

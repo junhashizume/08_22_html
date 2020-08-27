@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+
+</head>
+<body>
+ <iframe src="https://raw.githubusercontent.com/anars/blank-audio/master/500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+   <audio autoplay controls src="opening.mp3" style="display:none"></audio>
+   <audio src="idou.mp3" id="mimic" style="display: none;"></audio>
+
+  <div class="start">
+    <h1><img class="title" src="jankenquest.png" alt=""></h1>
+</div>
+
+<main class="opening1">
+<button id="start">はじめる</button>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+$('h1').css('display','none').fadeIn(2000);
+$('main').css('display','none').fadeIn(4000);
+
+$("#start").on("click",function(){
+  $("#mimic").get(0).play()
+  setTimeout(function(){
+            location.href='///Users/hashizumejun/Desktop/個人/GS/js01_haifu/kadai/janken_tpl2.html';
+        },1600);
+});
+
+</script>
+</body>
+</html>

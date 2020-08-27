@@ -1,0 +1,146 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    /* font-size:200%; */
+    text-align: center;
+    border-bottom:1px solid #fff;
+    /* height:200px; */
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+
+li#gu_btn {
+    background-color: orange;
+}
+
+li#cho_btn {
+    background-color: lightblue;
+}
+
+li#par_btn {
+    background-color: lightpink;
+}
+
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+.text{
+    height: 100px;
+    width: 300px;
+}
+
+main.opening1 {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    padding: 100px;
+}
+
+img.title {
+    width: 100%;
+}
+
+button.startbutton {
+    width: 400px;
+    font-size: 55px;
+}
+
+img.takarabox {
+    display: flex;
+    margin: auto;
+}
+
+div#echo2 {
+    justify-content: center;
+    display: flex;
+    color: red;
+}
+
+div#echo {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+div#pc_action {
+    display: flex;
+    justify-content: center;
+}
+
+img.takara {
+    display: flex;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+button.startbutton {
+    justify-content: center;
+    width: auto;
+}
+
+button#start {
+    width: 200px;
+    font-size: 39px;
+}
+
+.box_end {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.container1 {
+    padding: 91px 50px;
+}
+
+img#mimicimage {
+    margin: auto;
+    display: flex;
+}
+
+div#block1{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-image: url(../background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p#mimic_appear {
+    font-weight: bold;
+}
